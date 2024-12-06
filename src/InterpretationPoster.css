@@ -1,0 +1,119 @@
+:root {
+  --margin: 0in;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  letter-spacing: -.05em;
+
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+.editorWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.editor-container {
+  flex: 0 0 30%;
+
+  background-color: #FFF8E5;
+
+  box-shadow: 0px 0px 16px rgba(0,0,0,.12);
+
+  padding: 0px 24px 24px 24px;
+
+  height: 100vh;
+  overflow: scroll;
+}
+
+.editor-instance-wrapper {
+  margin-bottom: 24px;
+}
+
+.editor-instance-wrapper:not(:first-of-type) {
+  border-top: 1px solid rgba(0,0,0,.15);
+  padding-top: 24px;
+}
+
+.inputField {
+  display: flex;
+
+  margin-bottom: 16px;
+}
+
+.inputField > label {
+  flex: 0 0 100px;
+
+  font-size: 12px;
+  line-height: 32px;
+
+  text-align: right;
+
+  padding-right: 16px;
+}
+
+.inputField > input,
+.inputField > textarea,
+.inputField > select {
+
+  line-height: 24px;
+
+  padding: 4px 6px;
+  border-radius: 4px;
+
+  border: 1px solid #D9C082;
+
+  font-size: 16px;
+
+  flex: 1 0 auto;
+}
+
+.inputField > textarea {
+  height: 300px;
+
+  line-height: 1.4;
+}
+
+.poster-container {
+  margin: 0 auto;
+  padding: var(--margin) var(--margin) var(--margin) var(--margin);
+
+  width: 8.5in;
+  height: 11in;
+
+  border: 1px solid rgba(0,0,0,.15);
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.quarter-sheet {
+  width: 4.25in;
+  height: 5.48in; /* magic number is bad and should feel bad */
+}
+
+@media print {
+
+  @page {
+    size: 8.5in 11in;
+    margin: 0in 0in 0in 0in;
+  }
+
+  .editor-container {
+    display: none;
+  }
+
+  .poster-container {
+    border: none;
+  }
+}

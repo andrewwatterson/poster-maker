@@ -1,0 +1,44 @@
+:root {
+  --horizontalPadding: 36px;
+}
+
+.header-stripe {
+  background: linear-gradient(300deg, #026B6F 15%, #7e1c7e 85%);
+
+  height: 16px;
+
+  width: 100%;
+}
+
+.title {
+  font-weight: bold;
+
+  background: linear-gradient(300deg, #026B6F 15%, #7e1c7e 85%);
+  color: transparent;
+  background-clip: text;
+
+  padding: 24px var(--horizontalPadding) 12px var(--horizontalPadding);
+
+  font-size: 32pt;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.subtitle {
+  font-weight: bold;
+
+  font-size: 12pt;
+
+  padding: 0px var(--horizontalPadding) 4px var(--horizontalPadding);
+}
+
+.body-section {
+  font-size: 16pt;
+  line-height: 1.6;
+
+  flex: 1 1 auto;
+
+  overflow: hidden;
+
+  padding: 0px var(--horizontalPadding) 16px var(--horizontalPadding);
+}
